@@ -73,3 +73,13 @@ The code uses:
      'ThomasMorgenstern' 'MartinKoch' 'SebastianColloredo' 'PrimozPikl'
      'AndreasKofler' 'StephanHocke' 'TakanobuOkabe' 'SigurdPettersen'
      'AdamMalysz' 'JonAaraas' 'DimitryVassiliev']
+
+# Interesting observation
+When trying to solve instances with huge-candidate lists (warning: preprocessing implementation = slow; a few seconds), like **example_capital.txt**, something interesting happens in *Clp*:
+
+    Clp0032I Optimal objective 0.7213888889 - 0 iterations time 2.262, Presolve 0.11, Idiot 2.14
+
+- Clp uses most of the time in some routine called *Idiot*
+  - *Very interesting theory!*
+  - See [Crash-Starting the Simplex Method (Ivet Galabova, Julian Hall
+); slides of 12/2017](http://ivetgalabova.com/assets/Crash-Starting-Simplex-Cuba.pdf)
